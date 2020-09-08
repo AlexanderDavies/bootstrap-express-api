@@ -1,89 +1,59 @@
-# API template
-
-## TODO
-
-- this api uses `yarn`, can be problem with jenkins
-- coverage reports generated in `reports` dir, jenkins/sonarcube processing paths are different(`coverage` and `reports`), need to amend jenkins settings to use `reports`
-- remove jenkins update of package version. version should be changed by `yarn run release`
-- use eslint instead of tslint
+# DEFAULT JAVASCRIPT API template
 
 ## Summary
 
 ## Getting Started
 
-This API requires node `10.13.0` and npm `6.13.7`.
+This API requires node `12.16.3` or greater.
 
 To run this locally:
 
-```
-1. Clone the repository
-2. npm install
-3. npm run dev
-```
+    yarn (or NPM) run start:dev
 
 ### Accessing the Swagger UI
 
-By default if you have the API running locally, you can access the Swagger UI by pointing your browser to [http://localhost:8080](http://localhost:8080).
+By default if you have the API running locally, you can access the Swagger UI by pointing your browser to [http://localhost:3000/api-docs](http://localhost:3000/api-docs).
 
-## NPM Commands
+## YARN (or NPM) Commands
 
 Runs unit tests
+    yarn test
 
-```
-npm test
-```
+Run unit tests in debug
+    yarn run test:debug
 
-Runs e2e tests (can be run on pre prod env)
+Run unit test coverage
+    yarn run coverage
 
-```
-npm test:e2e
-```
+Start in debug mode
+    yarn run start:debug
 
-## Dev tools
+Format code 
+    yarn run prettify
 
-Cspell used for check commit message and staged changes upon commit.
-Commit message should be in jira style with ticket number in the beginning
-Staged changes are lining before commit
+### Folder structure
 
-Suggested VSC plugins: cspell, prettier to check errors in IDE
-
-To add `wrong word` into cspell dictionary use `cspell.json`
-Project uses https://www.conventionalcommits.org/en/v1.0.0/
-Commits should looks like:
-
-`git commit -m 'docs(CAP-1309): Add more descriptions'`
-
-Versioning provided by https://github.com/conventional-changelog/standard-version
-
-Run `npm run release` to update changelog and package number
-
-### Folders structure
-
-- bin - executables
 - reports - test reports
-- src - sources
-- test - tests
-- tmp - temporary folder
-
-### Folder for code quality reports
-
-Generated files:
-
-- cobertura-coverage.xml
-- jscpd-report.xml
-- lcov-report
-- lcov.info
+- src - all source code 
+    - api - all of the api business code and components
+        - shared
+            - middleware - shared middleware e.g. auth, error handling etc.
+            - models - shared models e.g. constants
+            - utils - shared utils
+            - index.controllers.js - import all controllers here for use in open api routing
+            - index.middleware.js - import all middleware here for use in open api routing
+            - open-api.yaml the route and param definitions conforming with open api 3.0 and used to spin up routes and perform paramater validations
+        - components: component structured controllers, services and middleware
+            - health check - deafault health check route
+    - app.js - registration of all middleware
+    - server.js - initialize the api
+- test - supertest integegration tests (note: unit tests should be placed next to the file in the api folder)
 
 ## Configuration
 
-All configuration settings are stored in `/config/env.js`. This repository uses `nconf` to manage configuration.
+All configuration settings are stored in `env`
 
 | Variable | Allow Options         | Default | Notes |
 | -------- | --------------------- | ------- | ----- |
-| port     | any number above 1000 | 8080    |       |
+| port     | any number above 1000 | 3000    |       |
 
-## Frequently Asked Questions
-
-```
-
-```
