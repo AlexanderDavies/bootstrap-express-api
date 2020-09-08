@@ -1,4 +1,4 @@
-# DEFAULT JAVASCRIPT API template
+# Default Javascript Api Template
 
 ## Summary
 
