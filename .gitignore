@@ -1,0 +1,8 @@
+node_modules
+yarn-error.log
+
+src/templates/javascript/node_modules
+src/templates/typescript/node_modules
+
+src/templates/javascript/yarn-eror.log
+src/templates/typescript/yarn-eror.log
