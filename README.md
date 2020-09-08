@@ -25,7 +25,7 @@ The CLI builds a new node template which includes
 
 # Installation
 
-    git clone ''
+    git clone git@github.com:AlexanderDavies/create-node-api.git
 
     cd create-node-api
 
