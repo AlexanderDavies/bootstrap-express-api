@@ -1,8 +1,7 @@
-'use strict';
+import { Response, Request, NextFunction } from 'express';
+import { get } from 'lodash';
 
-const { get } = require('lodash');
-
-const { logger } = require('../utils');
+import { logger } from '../utils';
 
 /**
  * Middleware to log the request
@@ -12,7 +11,7 @@ const { logger } = require('../utils');
  * @param {Function} next - Express next function
  */
 
-exports.requestLogger = (req, res, next) => {
+export const requestLogger = (req: Request, res: Response, next: NextFunction) => {
   const requestData = {
     url: get(req, 'url'),
     method: get(req, 'method'),
@@ -29,6 +28,6 @@ exports.requestLogger = (req, res, next) => {
     request: requestData,
     message: 'request body'
   });
-  
+
   next();
 };

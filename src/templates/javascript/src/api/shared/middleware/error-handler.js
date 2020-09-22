@@ -25,7 +25,8 @@ exports.errorHandler = async (error, req, res, next) => {
   //log the error
   logger.log({
     level: 'error',
-    error
+    error,
+    message
   });
 
   return res.status(status).json({ message, errors });

@@ -1,9 +1,9 @@
 /* istanbul ignore file */
-'use strict';
 
 /**
  * Constants class which exposes static maps and single value constants
  */
+
 
 class Constants {
   static environments = new Map([
@@ -34,23 +34,25 @@ class Constants {
     ['DELAY_MS', 500]
   ]);
 
+
+  /* tslint:disable */
   static unknownRouteConfig = new Map([
-    ['STATUS', 404],
+    ['STATUS', '404'],
     ['MESSAGE', 'resource does not exist']
   ]);
 
   static healthCheckRouteConfig = new Map([
-    ['STATUS', 200],
+    ['STATUS', '200'],
     ['MESSAGE', 'pong']
   ]);
 
   static defaultErrorConfig = new Map([
     ['MESSAGE', 'oops! something went wrong'],
-    ['STATUS', 500]
+    ['STATUS', '500']
   ]);
 
   static LOG_SERVICE = 'api-name';
   static LOG_FILE_PATH = '../../../../logs/';
 }
 
-module.exports = Constants;
+export default Constants;

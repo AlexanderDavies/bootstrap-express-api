@@ -1,0 +1,10 @@
+version: '3'
+services: 
+  example-api: 
+    build: .
+    ports: 
+      - "3000:3000"
+    volumes:
+      - $PWD/src:/src
+    env_file: 
+      - .env

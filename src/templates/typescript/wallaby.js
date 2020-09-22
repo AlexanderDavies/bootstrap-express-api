@@ -1,24 +1,14 @@
-module.exports = function (wallaby) {
+module.exports = function () {
   return {
-    files: [
-      { pattern: 'src/**/*.json', instrument: false },
-      { pattern: 'src/**/*.key', instrument: false },
-      { pattern: 'src/**/*.csr', instrument: false },
-      { pattern: 'src/**/*.crt', instrument: false },
-      'src/**/*.ts',
-      'test/**/*.ts',
-      '!src/**/*.spec.ts',
-      '!test/**/*.spec.ts'
-    ],
+    autoDetect: true,
+    testFramework: {
+      path: 'node_modules',
+      configFile: './jest.config.js'
+    },
     env: {
       type: 'node'
     },
-    compilers: {
-      '**/*.ts?(x)': wallaby.compilers.typeScript({})
-    },
-    testFramework: 'mocha',
-    tests: ['src/**/*.spec.ts', 'test/**/*.spec.ts'],
-    debug: true,
-    trace: true
+    filesWithNoCoverageCalculated: ['src/server.ts', 'src/app.ts'],
+    debug: true
   };
 };

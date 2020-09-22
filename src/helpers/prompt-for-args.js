@@ -1,14 +1,14 @@
 'use strict';
 
 const inquirer = require('inquirer');
-const {get} = require('lodash')
+const { get } = require('lodash');
 
 const Constants = require('../models/constants');
 
 exports.promptForArgs = async (options) => {
   let questions = [];
 
-  if (!get(options,'name')) {
+  if (!get(options, 'name')) {
     questions.push({
       type: Constants.nameArgConfig.get('TYPE'),
       name: Constants.nameArgConfig.get('NAME'),
@@ -16,7 +16,7 @@ exports.promptForArgs = async (options) => {
     });
   }
 
-  if (!get(options,'git')) {
+  if (!get(options, 'git')) {
     questions.push({
       type: Constants.gitArgConfig.get('TYPE'),
       name: Constants.gitArgConfig.get('NAME'),
@@ -25,7 +25,7 @@ exports.promptForArgs = async (options) => {
     });
   }
 
-  if (!get(options,'template')) {
+  if (!get(options, 'template')) {
     questions.push({
       type: Constants.templateArgConfig.get('TYPE'),
       name: Constants.templateArgConfig.get('NAME'),
@@ -38,8 +38,8 @@ exports.promptForArgs = async (options) => {
   const answers = await inquirer.prompt(questions);
 
   return {
-    name: get(options,'name') || get(answers,'name'),
-    git: get(options,'git') || get(answers,'git'),
-    template: get(options,'template') || get(answers,'template')
+    name: get(options, 'name') || get(answers, 'name'),
+    git: get(options, 'git') || get(answers, 'git'),
+    template: get(options, 'template') || get(answers, 'template')
   };
 };

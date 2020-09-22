@@ -9,3 +9,8 @@ src/templates/typescript/yarn-eror.log
 
 src/templates/javascript/reports
 src/templates/typescript/reports
+
+src/templates/typescript/dist
+
+src/templates/typescript/logs
+src/templates/javascript/logs

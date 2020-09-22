@@ -13,7 +13,7 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
-  "ignorePatterns": ["node_modules/", "src/**/*.spec.js"],
+  "ignorePatterns": ["node_modules/", "./src/templates/", "src/**/*.spec.js"],
   "rules": {
     "semi": [0, "never"],
     "quotes": [1, "single", "avoid-escape"],
