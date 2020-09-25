@@ -14,3 +14,6 @@ src/templates/typescript/dist
 
 src/templates/typescript/logs
 src/templates/javascript/logs
+
+src/templates/typescript/docs
+src/templates/javascript/docs

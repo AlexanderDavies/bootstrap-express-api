@@ -1,4 +1,4 @@
-FROM node:12.13.1-alpine
+FROM node:12.16.3-alpine
 
 WORKDIR /usr 
 
@@ -6,18 +6,18 @@ WORKDIR /usr
 COPY package.json yarn.lock ./
 
 #install dependencies
-RUN yarn install --production --prefer-offline
+RUN yarn install
 
+#copy all other source code to work directory
+ADD . .
+
+#build
 RUN npm run build:prod
-
-#copy src folder
-COPY ./dist/src ./src
 
 RUN mkdir "/usr/logs"
 
 #expose the port
 EXPOSE 3000
 
-# Run as a non-privileged user
-
+#run as a non-privileged user
 CMD ["node", "src/server.js"]

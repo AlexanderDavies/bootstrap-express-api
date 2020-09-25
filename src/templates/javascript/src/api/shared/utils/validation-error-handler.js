@@ -3,6 +3,12 @@
 const expressValidator = require('express-validator');
 const { ApiError } = require('../models/errors');
 
+/**
+ * Utility function to validate express middleware headers
+ * @function
+ * @param {Object} req - the express request object
+ */
+
 const validate = (req) => {
   const errors = expressValidator.validationResult(req);
 

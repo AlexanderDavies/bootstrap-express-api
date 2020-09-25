@@ -3,14 +3,15 @@
     "version": "1.0.0",
     "description": "Node express javascript template",
     "scripts": {
+        "document": "jsdoc src -r -d docs",
+        "prettify": "prettier --write 'src/**/*.js'",
+        "lint": "eslint ./src/**/*.js --fix",
         "test": "jest --ci  --reporters=default --detectOpenHandles",
         "test:debug": "node --inspect-brk ../node_modules/.bin/jest --runInBand",
         "coverage": "jest --ci --collectCoverage",
         "start:dev": "nodemon ./src/server.js",
         "start:debug": "nodemon --inspect=9229 src/server.js",
-        "start": "NODE_ENV=production node src/server.js",
-        "prettify": "prettier --write 'src/**/*.js'",
-        "lint": "eslint ./src/**/*.js --fix"
+        "start": "NODE_ENV=production node src/server.js"
     },
     "author": "Alexander Davies",
     "license": "MIT",
@@ -38,6 +39,7 @@
         "eslint": "^7.7.0",
         "eslint-config-prettier": "^6.11.0",
         "jest": "^26.4.2",
+        "jsdoc": "^3.6.6",
         "nodemon": "^2.0.4",
         "supertest": "^4.0.2"
     }

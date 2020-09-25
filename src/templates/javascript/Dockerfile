@@ -1,4 +1,4 @@
-FROM node:12.13.1-alpine
+FROM node:12.16.3-alpine
 
 WORKDIR /usr 
 
@@ -16,6 +16,6 @@ RUN mkdir "/usr/logs"
 #expose the port
 EXPOSE 3000
 
-# Run as a non-privileged user
+#run as a non-privileged user
 
 CMD ["node", "src/server.js"]

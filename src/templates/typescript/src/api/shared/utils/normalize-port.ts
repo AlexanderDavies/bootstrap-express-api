@@ -1,5 +1,12 @@
 import { round } from 'lodash';
 
+/**
+ * Utiltiy functiion to nomalize the process.ENV port value
+ * @function
+ * @param {(number|string)} val - the port value
+ */
+
+
 export const normalizePort = (val: string | number): number | boolean | string => {
   let port;
 

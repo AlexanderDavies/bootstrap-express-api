@@ -1,6 +1,11 @@
 import { Request, Response } from 'express';
 import { get } from 'lodash';
 
+/**
+ * Utiltiy object to standardise the response
+ * @type {{generateMeta: function, success: function, error: function}}
+ */
+
 export const responder = {
   generateMeta: (req: Request) => ({
     url: get(req, 'url'),
@@ -11,11 +16,7 @@ export const responder = {
   }),
 
   success: function (
-    {
-      status = 200,
-      message = 'OK',
-      data = ''
-    }: { status: number; message: string; data: any },
+    { status = 200, message = 'OK', data = '' }: { status: number; message: string; data: any },
     req: Request,
     res: Response
   ) {

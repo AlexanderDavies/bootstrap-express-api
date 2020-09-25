@@ -2,6 +2,11 @@
 
 const { get } = require('lodash');
 
+/**
+ * Utiltiy object to standardise the response
+ * @type {{generateMeta: function, success: function, error: function}}
+ */
+
 exports.responder = {
   generateMeta: (req) => ({
     url: get(req, 'url'),
