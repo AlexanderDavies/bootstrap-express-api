@@ -2,16 +2,13 @@ FROM node:12.16.3-alpine
 
 WORKDIR /usr 
 
-#copy package.json + yarn.lock or package-lock
-COPY package.json yarn.lock ./
+#copy all files
+COPY . .
 
 #install dependencies
 RUN yarn install
 
-#copy all other source code to work directory
-ADD . .
-
-#build
+#build dependencies
 RUN npm run build:prod
 
 RUN mkdir "/usr/logs"
@@ -20,4 +17,4 @@ RUN mkdir "/usr/logs"
 EXPOSE 3000
 
 #run as a non-privileged user
-CMD ["node", "src/server.js"]
+CMD ["node", "src/dist/server.js"]
