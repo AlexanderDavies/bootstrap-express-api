@@ -1,7 +1,7 @@
 'use strict';
 
 const { requestRateLimiter } = require('./request-rate-limiter');
-const Constants = require('../models/Constants');
+const Constants = require('../models/constants');
 
 jest.mock('express-rate-limit', () => (arg) => arg);
 

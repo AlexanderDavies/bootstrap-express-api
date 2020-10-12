@@ -2,7 +2,7 @@
 
 const slowDown = require('express-slow-down');
 
-const Constants = require('../models/Constants');
+const Constants = require('../models/constants');
 
 /**
  * Middleware to limit the response time of requests after a certain number in a defined period e.g. 100 in 15 minutes

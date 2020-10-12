@@ -1,5 +1,5 @@
 import { requestRateLimiter } from './request-rate-limiter';
-import Constants from '../models/Constants';
+import Constants from '../models/constants';
 
 jest.mock('express-rate-limit', () => (arg: any) => arg);
 

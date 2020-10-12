@@ -1,6 +1,6 @@
 import slowDown from 'express-slow-down';
 
-import Constants from '../models/Constants';
+import Constants from '../models/constants';
 
 /**
  * Middleware to limit the response time of requests after a certain number in a defined period e.g. 100 in 15 minutes

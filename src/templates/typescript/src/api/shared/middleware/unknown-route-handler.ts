@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import Constants from '../models/Constants';
+import Constants from '../models/constants';
 
 /**
  * Unknown Routes Handler

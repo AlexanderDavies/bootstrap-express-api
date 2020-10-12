@@ -1,7 +1,7 @@
 'use strict';
 
 const { name, version, description } = require('../../../../package.json');
-const Constants = require('../../shared/models/Constants');
+const Constants = require('../../shared/models/constants');
 const { responder } = require('../../shared/utils');
 
 /**

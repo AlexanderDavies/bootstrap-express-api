@@ -2,7 +2,7 @@
 
 const { healthCheck } = require('./health-check.controller');
 const { responder } = require('../../shared/utils');
-const Constants = require('../../shared/models/Constants');
+const Constants = require('../../shared/models/constants');
 
 describe('Health Check Controller', () => {
   const req = {

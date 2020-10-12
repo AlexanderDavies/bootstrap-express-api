@@ -1,6 +1,6 @@
 import { healthCheck } from './health-check.controller';
 import { responder } from '../../shared/utils';
-import Constants from '../../shared/models/Constants';
+import Constants from '../../shared/models/constants';
 
 describe('Health Check Controller', () => {
   const req: any = {

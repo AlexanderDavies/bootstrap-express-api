@@ -1,5 +1,5 @@
 import { name, version, description } from '../../../../package.json';
-import Constants from '../../shared/models/Constants';
+import Constants from '../../shared/models/constants';
 import { responder } from '../../shared/utils';
 import { Request, Response } from 'express';
 

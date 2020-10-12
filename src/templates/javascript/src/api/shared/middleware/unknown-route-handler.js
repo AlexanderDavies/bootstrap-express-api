@@ -1,6 +1,6 @@
 'use strict';
 
-const Constants = require('../models/Constants');
+const Constants = require('../models/constants');
 
 /**
  * Unknown Routes Handler
