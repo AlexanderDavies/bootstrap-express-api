@@ -5,6 +5,8 @@ WORKDIR /usr
 #copy all files
 COPY dist .
 
+COPY yarn.lock .
+
 #install dependencies
 RUN yarn install
 
