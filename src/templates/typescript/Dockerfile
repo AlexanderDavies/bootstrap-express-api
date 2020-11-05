@@ -1,4 +1,4 @@
-FROM node:12.16.3-alpine
+FROM node:14.15.0-alpine
 
 WORKDIR /usr 
 
@@ -7,11 +7,11 @@ COPY dist .
 
 COPY yarn.lock .
 
-#install dependencies
-RUN yarn install
-
 #expose the port
 EXPOSE 3000
 
+ENV NODE_ENV production
+ENV SWAGGER_UI true
+
 #run as a non-privileged user
-CMD ["node", "src/server.js"]
+CMD ["node", "bundle.js"]

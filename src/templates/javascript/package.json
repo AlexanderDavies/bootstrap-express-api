@@ -4,19 +4,19 @@
     "description": "Node express javascript template",
     "scripts": {
         "document": "jsdoc src -r -d docs",
-        "prettify": "prettier --write 'src/**/*.js'",
+        "format": "prettier --write 'src/**/*.js'",
         "lint": "eslint ./src/**/*.js --fix",
         "test": "jest --ci  --reporters=default --detectOpenHandles",
         "test:debug": "node --inspect-brk ../node_modules/.bin/jest --runInBand",
         "coverage": "jest --ci --collectCoverage",
         "start:dev": "nodemon ./src/server.js",
         "start:debug": "nodemon --inspect=9229 src/server.js",
-        "start": "NODE_ENV=production node src/server.js"
+        "start": "NODE_ENV=production  SWAGGER_UI=true node src/server.js"
     },
     "author": "Alexander Davies",
     "license": "MIT",
     "engines": {
-        "node": ">=12.16.3"
+        "node": ">=12.13.0"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
@@ -30,8 +30,7 @@
         "swagger-routes-express": "^3.2.1",
         "swagger-ui-express": "^4.1.4",
         "uuid": "^8.3.0",
-        "winston": "^3.3.3",
-        "yamljs": "^0.3.0"
+        "winston": "^3.3.3"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
@@ -41,6 +40,6 @@
         "jest": "^26.4.2",
         "jsdoc": "^3.6.6",
         "nodemon": "^2.0.4",
-        "supertest": "^4.0.2"
+        "supertest": "6.0.1"
     }
 }

@@ -12,7 +12,7 @@ To run this locally:
 
 ### Accessing the Swagger UI
 
-By default if you have the API running locally, you can access the Swagger UI by pointing your browser to [http://localhost:3000/api-docs](http://localhost:3000/api-docs).
+By default if you have the API running locally, you can access the Swagger UI by pointing your browser to [http://localhost:8080/api-docs](http://localhost:8080/api-docs).
 
 ## YARN (or NPM) Commands
 

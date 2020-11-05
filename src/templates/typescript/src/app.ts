@@ -2,11 +2,9 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
-import YAML from 'yamljs';
 import { connector } from 'swagger-routes-express';
 import swaggerUi from 'swagger-ui-express';
 import { OpenApiValidator } from 'express-openapi-validate';
-import path from 'path';
 
 import {
   requestRateLimiter,
@@ -17,7 +15,9 @@ import {
   unknownRouteHandler
 } from './api/shared/middleware';
 import controllers from './api/index.controllers';
-import Constants from './api/shared/models/constants';
+
+//required to set the type as any
+const openApi: any = require('./api/open-api.json');
 
 const app = express();
 
@@ -35,16 +35,13 @@ app.use(requestSpeedLimiter);
 //set the access/origin headers
 app.use(setAccessHeaders);
 
-//import opanapi spec
-const openApi = YAML.load(path.join(__dirname, './api/open-api.yaml'));
-
 //validate requrest
 const validator = new OpenApiValidator(openApi);
 
 app.use(validator.match());
 
 //serve swagger-ui if not in production
-if (process.env.NODE_ENV !== Constants.environments.get('PRODUCTION')) {
+if (process.env.SWAGGER_UI) {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openApi));
 }
 

@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== Constants.environments.get('PRODUCTION')) {
   require('dotenv').config();
 }
 
-const server: any = app.listen(normalizePort(process.env.PORT || 3000));
+const server: any = app.listen(normalizePort(process.env.PORT || 8080));
 
 //log the connection
 logger.log({
