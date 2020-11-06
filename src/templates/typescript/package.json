@@ -4,17 +4,17 @@
     "description": "Node express typescript template",
     "scripts": {
         "document": "typedoc --out docs src",
+        "format": "prettier --write 'src/**/*.ts'",
+        "lint": "eslint ./src/**/*.ts --fix",
         "test": "jest --ci  --reporters=default --detectOpenHandles",
         "test:debug": "node --inspect-brk ../node_modules/.bin/jest --runInBand",
         "coverage": "jest --ci --collectCoverage",
-        "build:prod": "webpack",
-        "start:dev": "tsnd ./src/server.ts",
+        "start:dev": "SWAGGER_UI=true tsnd ./src/server.ts",
         "start:debug": "tsnd --inspect=9229 src/server.ts",
         "start": "NODE_ENV=production SWAGGER_UI=true node dist/bundle.js",
-        "format": "prettier --write 'src/**/*.ts'",
-        "lint": "eslint ./src/**/*.ts --fix"
+        "build:prod": "webpack"
     },
-    "author": "Alexander Davies", 
+    "author": "Alexander Davies",
     "license": "MIT",
     "engines": {
         "node": ">=12.13.0"
