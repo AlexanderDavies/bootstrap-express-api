@@ -6,7 +6,6 @@ import { round } from 'lodash';
  * @param {(number|string)} val - the port value
  */
 
-
 export const normalizePort = (val: string | number): number | boolean | string => {
   let port;
 

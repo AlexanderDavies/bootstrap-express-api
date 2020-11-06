@@ -1,5 +1,3 @@
-
-
 /**
  * Creates an ApiError object which extends the native JS Error object
  * @constructor

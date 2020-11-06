@@ -1,4 +1,4 @@
-import { normalizePort }  from './normalize-port';
+import { normalizePort } from './normalize-port';
 
 describe('Util: Normalize Port', function () {
   it('should return the arg if it is not a number', function () {

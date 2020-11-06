@@ -1,6 +1,4 @@
-
-
-import { ApiError }  from './errors';
+import { ApiError } from './errors';
 
 describe('Util: ApiError', () => {
   describe('When generating the error', () => {

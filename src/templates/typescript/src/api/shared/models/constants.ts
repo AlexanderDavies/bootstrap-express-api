@@ -4,7 +4,6 @@
  * Constants class which exposes static maps and single value constants
  */
 
-
 class Constants {
   static environments = new Map([
     ['DEVELOPMENT', 'development'],
@@ -33,7 +32,6 @@ class Constants {
     ['DELAY_AFTER', 100],
     ['DELAY_MS', 500]
   ]);
-
 
   /* tslint:disable */
   static unknownRouteConfig = new Map([

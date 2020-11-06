@@ -1,0 +1,36 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "ignorePatterns": ["test/**/*.ts", "node_modules/", "src/**/*.spec.ts"],
+  "rules": {
+    "semi": [0, "never"],
+    "quotes": [1, "single", "avoid-escape"],
+    "no-param-reassign": [1],
+    "object-curly-spacing": [2, "always"],
+    "space-in-parens": [0, "always"],
+    "prefer-const": 1,
+    "camelcase": [1],
+    "no-shadow": [1],
+    "no-use-before-define": ["error", { "functions": true }],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off"
+  }
+}

@@ -1,5 +1,5 @@
-import expressValidator  from 'express-validator';
-import validateUtil  from './validation-error-handler';
+import expressValidator from 'express-validator';
+import validateUtil from './validation-error-handler';
 
 jest.mock('express-validator', () => ({
   validationResult: () => ({

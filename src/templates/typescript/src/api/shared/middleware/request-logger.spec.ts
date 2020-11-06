@@ -1,6 +1,5 @@
-
-import { requestLogger }  from './request-logger';
-import { logger }  from '../utils';
+import { requestLogger } from './request-logger';
+import { logger } from '../utils';
 
 jest.mock('../utils', () => ({
   logger: {

@@ -29,6 +29,6 @@ exports.requestLogger = (req, res, next) => {
     request: requestData,
     message: 'request body'
   });
-  
+
   next();
 };
