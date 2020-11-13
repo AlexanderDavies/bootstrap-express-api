@@ -14,7 +14,7 @@ COPY ./src ./src
 RUN mkdir "/usr/logs"
 
 #expose the port
-EXPOSE 3000
+EXPOSE 8080
 
 #run as a non-privileged user
 
