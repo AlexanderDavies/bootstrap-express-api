@@ -3,7 +3,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const { connector } = require('swagger-routes-express');
+const { connectRoutes } = require('openapi-express-router');
 const swaggerUi = require('swagger-ui-express');
 const { OpenApiValidator } = require('express-openapi-validate');
 
@@ -44,11 +44,8 @@ if (process.env.SWAGGER_UI) {
   app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(openApi));
 }
 
-//serve open api routes
-const connect = connector(controllers, openApi, {
-  security: {},
-  middleware: {},
-  apiSeparator: '/'
+const connect = connectRoutes(openApi, {
+  controllers
 });
 
 connect(app);

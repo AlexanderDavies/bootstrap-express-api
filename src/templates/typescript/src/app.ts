@@ -2,7 +2,7 @@
 
 import express from 'express';
 import bodyParser from 'body-parser';
-import { connector } from 'swagger-routes-express';
+import { connectRoutes } from 'openapi-express-router';
 import swaggerUi from 'swagger-ui-express';
 import { OpenApiValidator } from 'express-openapi-validate';
 
@@ -46,10 +46,8 @@ if (process.env.SWAGGER_UI) {
 }
 
 //serve open api routes
-const connect = connector(controllers, openApi, {
-  security: {},
-  middleware: {},
-  apiSeparator: '/'
+const connect = connectRoutes(openApi, {
+  controllers
 });
 
 connect(app);

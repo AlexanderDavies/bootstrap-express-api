@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "create-node-api",
   "version": "1.0.0",
   "description": "A node cli to create a new node, express, typescript project",
   "main": "src/index.js",

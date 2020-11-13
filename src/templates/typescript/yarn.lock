@@ -5075,6 +5075,13 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
+openapi-express-router@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/openapi-express-router/-/openapi-express-router-1.0.3.tgz#d5f57f069fa430f6f290b5678268692d5dc6d9a9"
+  integrity sha512-Iim2G9zFlnuT25OaaLSjPSnBa3zJnr9JcrGmEnTCuh5+tJQZYwsxPNcemX3MC2Gaia1PvmScccdlNxKHtH9gjQ==
+  dependencies:
+    lodash "^4.17.20"
+
 opencollective-postinstall@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
