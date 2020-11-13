@@ -2,13 +2,14 @@
 
 An opinionated NODE CLI for generating Javascript or Typescript Express apis.
 
-The CLI builds a new node template which includes
+The CLI builds a new Node.js Express template which includes:
 
 - express server
 - prettier config
-- eslint or (tslint) config
+- eslint config
 - tsconfig for typescript projects
 - jest unit tests
+- supertest for integration tests 
 - wallaby unit testing configuration
 - default docker + docker-compose files
 - git initialisation
@@ -22,6 +23,7 @@ The CLI builds a new node template which includes
 - rate limiting and rate slow down
 - JSDOC
 - Default health route
+- Husky and conventional commits to ensure git commit standards
 
 # Installation
 
