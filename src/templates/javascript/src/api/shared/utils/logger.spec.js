@@ -18,5 +18,6 @@ describe('Util: Logger', () => {
       const { logger } = require('./logger');
       expect(createLoggerSpy).toHaveBeenCalled();
     });
+  
   });
 });

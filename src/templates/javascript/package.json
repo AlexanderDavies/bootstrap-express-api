@@ -8,7 +8,7 @@
         "lint": "eslint ./src/**/*.js --fix",
         "test": "jest --ci  --reporters=default --detectOpenHandles",
         "test:debug": "node --inspect-brk ../node_modules/.bin/jest --runInBand",
-        "coverage": "jest --ci --collectCoverage",
+        "coverage": "jest --ci --collectCoverage --no-cache",
         "start:dev": "SWAGGER_UI=true nodemon ./src/server.js",
         "start:debug": "SWAGGER_UI=true nodemon --inspect=9229 src/server.js",
         "start": "NODE_ENV=production  SWAGGER_UI=true node src/server.js"

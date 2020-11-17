@@ -33,11 +33,23 @@ describe('Util: Responder', () => {
       responder.success(params, req, res);
       expect(res.json).toHaveBeenCalled();
     });
+
+    it('should set the default status, meta and body properties if not provided', () => {
+      const params: any = {};
+      responder.success(params, req, res);
+      expect(res.json).toHaveBeenCalled();
+    });
   });
 
   describe('When calling the error method', () => {
     const error = new ApiError({ status: 404, message: 'failed' });
     it('should call the res object with the status, meta and body', () => {
+      responder.error(error, req, res);
+      expect(res.json).toHaveBeenCalled();
+    });
+
+    it('should set the status, message and errors to default values if not provided', () => {
+      const error = new Error();
       responder.error(error, req, res);
       expect(res.json).toHaveBeenCalled();
     });

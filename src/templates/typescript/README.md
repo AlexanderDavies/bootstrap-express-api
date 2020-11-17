@@ -42,7 +42,7 @@ Format code
             - utils - shared utils
             - index.controllers.js - import all controllers here for use in open api routing
             - index.middleware.js - import all middleware here for use in open api routing
-            - open-api.yaml the route and param definitions conforming with open api 3.0 and used to spin up routes and perform paramater validations
+            - open-api.json the route and param definitions conforming with open api 3.0 and used to spin up routes and perform paramater validations
         - components: component structured controllers, services and middleware
             - health check - deafault health check route
     - app.ts - registration of all middleware

@@ -1,13 +1,12 @@
 'use strict';
 
 const fs = require('fs');
-const yaml = require('js-yaml');
 const path = require('path');
 
 const Constants = require('../models/constants');
 
 const editPackageJson = (projectName) => {
-  const fileName = path.join(process.cwd(), `/${projectName}/`, `package.json`);
+  const fileName = path.join(process.cwd(), `/${projectName}/`, 'package.json');
 
   const file = fs.readFileSync(fileName, Constants.FS_ENCODING);
 
@@ -18,29 +17,26 @@ const editPackageJson = (projectName) => {
   return fs.writeFileSync(fileName, JSON.stringify(fileJson, null, 2), Constants.FS_ENCODING);
 };
 
-const editOpenApiYaml = (projectName) => {
+const editOpenApiJson = (projectName) => {
   const fileName = path.join(process.cwd(), `/${projectName}/`, Constants.OPEN_API_PATH);
 
-  const openApiYaml = fs.readFileSync(fileName, Constants.FS_ENCODING);
-  const openApiJson = yaml.safeLoad(openApiYaml);
+  const openApiJson = JSON.parse(fs.readFileSync(fileName, Constants.FS_ENCODING));
 
   openApiJson.info.title = projectName;
 
-  const updatedYaml = yaml.safeDump(openApiJson);
-
-  return fs.writeFileSync(fileName, updatedYaml, Constants.FS_ENCODING);
+  return fs.writeFileSync(fileName, JSON.stringify(openApiJson, null, 2), Constants.FS_ENCODING);
 };
 
 const renameProject = (projectName) => {
   editPackageJson(projectName);
 
-  editOpenApiYaml(projectName);
+  editOpenApiJson(projectName);
 
   return true;
 };
 
 module.exports = {
   editPackageJson,
-  editOpenApiYaml,
+  editOpenApiJson,
   renameProject
 };

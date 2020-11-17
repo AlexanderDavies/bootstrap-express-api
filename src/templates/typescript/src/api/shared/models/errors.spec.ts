@@ -13,5 +13,14 @@ describe('Util: ApiError', () => {
       expect(error.status).toEqual(errorStatus);
       expect(error.errors).toEqual(null);
     });
+
+    it('should return an instance of an api erorr with default values if none are provided', () => {
+      const obj: any = {};
+      const error = new ApiError(obj);
+      expect(error).toBeInstanceOf(ApiError);
+      expect(error.message).toEqual('');
+      expect(error.status).toEqual(500);
+      expect(error.errors).toBe(null);
+    });
   });
 });

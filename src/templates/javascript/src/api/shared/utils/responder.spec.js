@@ -35,6 +35,11 @@ describe('Util: Responder', () => {
       responder.success(params, req, res);
       expect(res.json).toHaveBeenCalled();
     });
+
+    it('should set the default status, meta and body properties if not provided', () => {
+      responder.success({}, req, res);
+      expect(res.json).toHaveBeenCalled();
+    });
   });
 
   describe('When calling the error method', () => {
@@ -43,5 +48,11 @@ describe('Util: Responder', () => {
       responder.error(error, req, res);
       expect(res.json).toHaveBeenCalled();
     });
+
+    it('should set the status, message and errors to default values if not provided', () => {
+      const error = new Error();
+      responder.error(error, req, res);
+      expect(res.json).toHaveBeenCalled();
+    })
   });
 });

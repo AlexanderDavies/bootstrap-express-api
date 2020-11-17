@@ -13,28 +13,24 @@ The CLI builds a new Node.js Express template which includes:
 - wallaby unit testing configuration
 - default docker + docker-compose files
 - git initialisation
+- Husky and conventional commits to ensure git commit standards
 - VS code launch debug config
 - swagger-ui
 - openapi route definitions and automated routing
-- openapi parameter validation
+- openapi validation
 - nodemon (or ts-node-dev) for hot reloading
 - webpack bundling for typescript projects
 - logging
-- rate limiting and rate slow down
+- rate limiting
+- rate slow down
 - JSDOC
 - Default health route
-- Husky and conventional commits to ensure git commit standards
-
-# Installation
-
-    git clone git@github.com:AlexanderDavies/create-node-api.git
-
-    cd create-node-api
-
-    yarn link
 
 # Usage
 
-    create-node-api --name="my-api" --git=true --template="javascript"
+    npx create-node-api --name="my-api" --git=true --template="javascript"
 
-    create-node-api -N="my-api" -G=true -T="javascript"
+    npx create-node-api -N="my-api" -G=true -T="javascript"
+
+
+Note: The README contained inside the newly created project provides detail on the api folder structure and its usage

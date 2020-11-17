@@ -4074,9 +4074,9 @@ onetime@^5.1.0:
     mimic-fn "^2.1.0"
 
 openapi-express-router@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/openapi-express-router/-/openapi-express-router-1.0.3.tgz#d5f57f069fa430f6f290b5678268692d5dc6d9a9"
-  integrity sha512-Iim2G9zFlnuT25OaaLSjPSnBa3zJnr9JcrGmEnTCuh5+tJQZYwsxPNcemX3MC2Gaia1PvmScccdlNxKHtH9gjQ==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/openapi-express-router/-/openapi-express-router-1.0.4.tgz#00c48e3fff5fc8f2d29a11de729611b2c5636b10"
+  integrity sha512-pyeeJiqE9lf4Ded2SbXtcGMxpfnNGRDGOdwfimY9DUZEB/xJDIZ0wQMQ+v//uGplkXxAZDepikriqcauhv7ceg==
   dependencies:
     lodash "^4.17.20"
 

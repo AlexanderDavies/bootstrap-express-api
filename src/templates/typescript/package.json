@@ -8,7 +8,7 @@
         "lint": "eslint ./src/**/*.ts --fix",
         "test": "jest --ci  --reporters=default --detectOpenHandles",
         "test:debug": "node --inspect-brk ../node_modules/.bin/jest --runInBand",
-        "coverage": "jest --ci --collectCoverage",
+        "coverage": "jest --ci --collectCoverage --no-cache",
         "start:dev": "SWAGGER_UI=true tsnd ./src/server.ts",
         "start:debug": "tsnd --inspect=9229 src/server.ts",
         "start": "NODE_ENV=production SWAGGER_UI=true node dist/bundle.js",

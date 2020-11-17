@@ -33,7 +33,7 @@ class Constants {
     ['PROJECT_FAILED', 'Failed to initialize the api'],
     ['GIT_FAILED', 'Failed to initialize git'],
     ['PACKAGE_JSON_FAILED', 'Failed to update the package.json api name'],
-    ['OPEN_API_FAILED', 'Failed to update the open-api.yaml api title']
+    ['OPEN_API_FAILED', 'Failed to update the open-api.json api title']
   ]);
 
   static taskTitles = new Map([
@@ -44,7 +44,7 @@ class Constants {
   ]);
 
   static RELATIVE_TEMPLATE_PATH = '../templates/';
-  static OPEN_API_PATH = 'src/api/open-api.yaml';
+  static OPEN_API_PATH = 'src/api/open-api.json';
   static DEFAULT_PROJECT_NAME = 'example-api';
   static FS_ENCODING = 'utf8';
   static ERROR = 'ERROR';

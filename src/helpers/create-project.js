@@ -62,7 +62,7 @@ exports.createProject = async (opts) => {
       {
         title: Constants.taskTitles.get('RENAME_PROJECT'),
         task: () => renameProject(get(options, Constants.nameArgConfig.get('NAME')))
-      }
+      },
     ]);
 
     await tasks.run();
