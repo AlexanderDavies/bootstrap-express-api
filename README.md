@@ -26,6 +26,10 @@ The CLI builds a new Node.js Express template which includes:
 - JSDOC
 - Default health route
 
+# Prerequisites
+
+requires node >=12.13.0
+
 # Usage
 
     npx create-node-api --name="my-api" --git=true --template="javascript"

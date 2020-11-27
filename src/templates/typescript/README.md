@@ -1,6 +1,8 @@
 # Default Typescript Api Template
 
-## Summary
+# Prerequisites
+
+requires node >=12.13.0
 
 ## Getting Started
 
