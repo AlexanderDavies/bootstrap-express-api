@@ -1,8 +1,12 @@
 {
   "name": "create-node-api",
   "version": "1.0.0",
-  "description": "A node cli to create a new node, express, typescript project",
+  "description": "An opinionated NODE CLI for generating Javascript or Typescript Express apis",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexanderDavies/create-node-cli"
+  },
   "bin": {
     "create-node-api": "bin/create-node-api.js"
   },
@@ -19,10 +23,13 @@
     "create-node-api",
     "cli",
     "typescript",
+    "javascript",
+    "api",
     "express",
     "jest",
     "prettier",
-    "project"
+    "project",
+    "template"
   ],
   "author": "Alexander Davies",
   "license": "ISC",
