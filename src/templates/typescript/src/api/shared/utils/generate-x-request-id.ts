@@ -5,6 +5,6 @@ import { v4 } from 'uuid';
  * @function
  */
 
-export const generateRequestId = () => {
+export const generateRequestId = (): string => {
   return v4();
 };

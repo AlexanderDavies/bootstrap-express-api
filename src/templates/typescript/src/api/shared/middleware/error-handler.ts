@@ -19,7 +19,7 @@ export const errorHandler = async (
   req: Request,
   res: Response,
   next: NextFunction
-) => {
+): Promise<any> => {
   //if no error then call next to handle the unknown route
   if (!error) {
     return next();

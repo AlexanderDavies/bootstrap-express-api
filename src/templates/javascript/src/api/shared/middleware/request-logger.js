@@ -14,9 +14,9 @@ const { logger } = require('../utils');
 
 exports.requestLogger = (req, res, next) => {
   const requestData = {
+    timestamp: new Date().toString(),
     url: get(req, 'url'),
     method: get(req, 'method'),
-    timestamp: new Date().toString(),
     headers: JSON.stringify(get(req, 'headers')),
     ip: get(req, 'connection.remoteAddress'),
     body: get(req, 'body'),
@@ -27,7 +27,7 @@ exports.requestLogger = (req, res, next) => {
   logger.log({
     level: 'info',
     request: requestData,
-    message: 'request body'
+    message: 'REQUEST'
   });
 
   next();

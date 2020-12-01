@@ -8,7 +8,7 @@ import { ApiError } from '../models/errors';
  * @param {Object} req - the express request object
  */
 
-const validate = (req: Request) => {
+const validate = (req: Request): boolean => {
   const errors = expressValidator.validationResult(req);
 
   if (!errors.isEmpty()) {

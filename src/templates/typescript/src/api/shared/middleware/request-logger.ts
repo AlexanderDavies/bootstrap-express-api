@@ -11,11 +11,11 @@ import { logger } from '../utils';
  * @param {Function} next - Express next function
  */
 
-export const requestLogger = (req: Request, res: Response, next: NextFunction) => {
+export const requestLogger = (req: Request, res: Response, next: NextFunction): void => {
   const requestData = {
+    timestamp: new Date().toString(),
     url: get(req, 'url'),
     method: get(req, 'method'),
-    timestamp: new Date().toString(),
     headers: JSON.stringify(get(req, 'headers')),
     ip: get(req, 'connection.remoteAddress'),
     body: get(req, 'body'),
@@ -26,7 +26,7 @@ export const requestLogger = (req: Request, res: Response, next: NextFunction) =
   logger.log({
     level: 'info',
     request: requestData,
-    message: 'request body'
+    message: 'REQUEST'
   });
 
   next();

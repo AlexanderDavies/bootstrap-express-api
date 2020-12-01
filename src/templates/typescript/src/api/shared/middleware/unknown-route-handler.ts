@@ -9,7 +9,7 @@ import Constants from '../models/constants';
  * @param {Object} res - Express response object
  */
 
-export const unknownRouteHandler = (req: Request, res: Response) => {
+export const unknownRouteHandler = (req: Request, res: Response): Response => {
   return res.status(+Constants.unknownRouteConfig.get('STATUS')).json({
     message: Constants.unknownRouteConfig.get('MESSAGE')
   });
