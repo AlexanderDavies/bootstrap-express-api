@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "description": "Default setup for the node-create-api cli",
+    "description": "Default setup for the bootstrap-express-api cli",
     "version": "1.0.0",
     "title": "default-api"
   },
