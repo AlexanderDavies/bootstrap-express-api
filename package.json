@@ -1,14 +1,14 @@
 {
-  "name": "create-node-api",
+  "name": "bootstrap-express-api",
   "version": "1.0.0",
   "description": "An opinionated NODE CLI for generating Javascript or Typescript Express apis",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexanderDavies/create-node-cli"
+    "url": "https://github.com/AlexanderDavies/bootstrap-express-cli"
   },
   "bin": {
-    "create-node-api": "bin/create-node-api.js"
+    "bootstrap-express-api": "bin/bootstrap-express-api.js"
   },
   "publishConfig": {
     "access": "public"
@@ -20,7 +20,7 @@
   },
   "keywords": [
     "node",
-    "create-node-api",
+    "bootstrap-express-api",
     "cli",
     "typescript",
     "javascript",

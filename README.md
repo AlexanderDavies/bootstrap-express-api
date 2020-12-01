@@ -1,4 +1,4 @@
-# CREATE-NODE-API
+# BOOTSTRAP-EXPRESS-API
 
 An opinionated NODE CLI for generating Javascript or Typescript Express apis.
 
@@ -32,9 +32,9 @@ requires node >=12.13.0
 
 # Usage
 
-    npx create-node-api --name="my-api" --git=true --template="javascript"
+    npx bootstrap-express-api --name="my-api" --git=true --template="javascript"
 
-    npx create-node-api -N="my-api" -G=true -T="javascript"
+    npx bootstrap-express-api -N="my-api" -G=true -T="javascript"
 
 
 Note: The README contained inside the newly created project provides detail on the api folder structure and its usage
