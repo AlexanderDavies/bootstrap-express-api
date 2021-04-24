@@ -1,11 +1,11 @@
 {
   "name": "bootstrap-express-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An opinionated NODE CLI for generating Javascript or Typescript Express apis",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexanderDavies/bootstrap-express-cli"
+    "url": "https://github.com/AlexanderDavies/bootstrap-express-api"
   },
   "bin": {
     "bootstrap-express-api": "bin/bootstrap-express-api.js"
@@ -16,7 +16,8 @@
   "scripts": {
     "test": "jest --ci  --reporters=default --detectOpenHandles",
     "prettify": "prettier --write 'src/**/*.js'",
-    "lint": "eslint ./**/*.js --fix"
+    "lint": "eslint ./**/*.js --fix",
+    "prepare": "husky install"
   },
   "keywords": [
     "node",
@@ -37,23 +38,23 @@
     "node": ">=12.13.0"
   },
   "dependencies": {
-    "arg": "^4.1.3",
-    "chalk": "^4.1.0",
-    "execa": "^4.0.3",
-    "inquirer": "^7.3.3",
+    "arg": "^5.0.0",
+    "chalk": "^4.1.1",
+    "execa": "^5.0.0",
+    "inquirer": "^8.0.0",
     "listr": "^0.14.3",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "ncp": "^2.0.0",
     "pkg-install": "^1.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
-    "husky": "^4.3.0",
-    "jest": "^26.4.2",
-    "prettier": "^2.1.2"
+    "eslint": "^7.24.0",
+    "eslint-config-prettier": "^8.2.0",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
   }
 }

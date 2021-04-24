@@ -53,6 +53,6 @@ describe('Util: Responder', () => {
       const error = new Error();
       responder.error(error, req, res);
       expect(res.json).toHaveBeenCalled();
-    })
+    });
   });
 });

@@ -1,4 +1,4 @@
-const { editPackageJson, editOpenApiYaml, renameProject } = require('./rename-project');
+const { editPackageJson, renameProject } = require('./rename-project');
 
 jest.mock('js-yaml', () => ({
   safeLoad: jest.fn().mockReturnValue({ info: { title: 'test' } }),
@@ -6,7 +6,7 @@ jest.mock('js-yaml', () => ({
 }));
 
 jest.mock('fs', () => ({
-  readFileSync: jest.fn().mockReturnValue(JSON.stringify({ testValue: 'test' })),
+  readFileSync: jest.fn().mockReturnValue(JSON.stringify({ info: {title: 'test'} })),
   writeFileSync: jest.fn().mockReturnValue(JSON.stringify({ testValue: 'test' }))
 }));
 
@@ -17,11 +17,7 @@ describe('Helper: Reaname Project', () => {
     expect(editPackageJson(projectName)).toEqual('{"testValue":"test"}');
   });
 
-  it('should rename title in open-api.yml', () => {
-    expect(editOpenApiYaml(projectName)).toEqual('{"testValue":"test"}');
-  });
-
-  it('should rename title in open-api.yml and package.json', () => {
+  it('should rename title in open-api.json and package.json', () => {
     expect(renameProject(projectName)).toEqual(true);
   });
 });

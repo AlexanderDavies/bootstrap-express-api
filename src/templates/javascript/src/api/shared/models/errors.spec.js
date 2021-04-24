@@ -22,6 +22,6 @@ describe('Util: ApiError', () => {
       expect(error.message).toEqual('');
       expect(error.status).toEqual(500);
       expect(error.errors).toBe(null);
-    })
+    });
   });
 });
